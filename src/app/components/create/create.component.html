@@ -1,0 +1,34 @@
+
+<div class="docForm">
+	<div class="img">
+		<img src="https://img.freepik.com/free-vector/text-files-concept-illustration_114360-4402.jpg?size=626&ext=jpg&ga=GA1.2.606561319.1651748960">
+	</div>
+	<form>
+		
+		<div class="form-group mb3">
+			<label>Document Name</label>
+			<input type="text" class="form-control" name="docName" [(ngModel)]="doc.name">
+		</div>
+
+    <div class="form-group">
+	    <label>Document Type</label>
+	    <br>
+	    <select class="custom-select form-control mb3"  #type>
+				<option>Choose the document type ...</option>
+		    <option *ngFor="let type of types" >{{type}}</option>
+	    </select>
+    </div>
+ 
+    <div class="form-group mb3">
+			<label>Document Description</label>
+			<textarea rol="3" cols="5" class="form-control" name="docDesc" [(ngModel)]="doc.desc"></textarea>
+		</div> 
+    <div class="button">
+		  <button class="btn btn-primary nextBtn" (click)="onsubmit()">Submit</button> 
+		  <button class="btn btn-primary nextBtn" routerLink="../file-upload">Next</button>
+	  </div>
+		 <!-- <button class="btn btn-primary nextBtn" routerLink="../file-upload">Next</button> -->
+
+	</form>
+</div>
+
